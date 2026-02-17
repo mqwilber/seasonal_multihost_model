@@ -1,14 +1,12 @@
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import statsmodels.api as sm
 from sklearn.preprocessing import SplineTransformer
 from sklearn.linear_model import PoissonRegressor, LogisticRegression, LinearRegression, Ridge
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
-from scipy.optimize import fmin
 from numba import njit
 
 """

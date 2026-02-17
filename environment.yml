@@ -4,7 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.8.5
-  # - ipython=8.4.0 # Pip install this
+  # - ipython=8.4.0 # Pip install this after the the install
   - jupyter=1.0.0
   - numpy=1.23.3
   - pandas=1.4.4
@@ -15,6 +15,7 @@ dependencies:
   - pip #=19.1.1=py37_0
   - sympy=1.10.1
   - statsmodels=0.13.2
-  - pingouin=0.5.2
   - pip:                            # Packages installed from PyPI
     - jedi==0.18.1
+    - numba
+    - plotnine
