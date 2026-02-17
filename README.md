@@ -4,6 +4,8 @@ The repository contains the scripts and data needed to reproduce the results des
 
 The repository contains both R and Python code.  To run the Python code, build the conda environment specified by the `environment.yml` file.  See [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#) for details on building a conda environment. The R script requires cmdstanr.  This requires a Stan installation.  See [here](https://mc-stan.org/install/) to get Stan and cmdstanr installed on your machine.
 
+When running the code, run `seasonal_R0_analysis_by_site.py` before running `manuscript_plots.ipynb`.
+
 - `data/`:  The `data` folder contains raw and model-derived data used for the analyses
 	- `ves_dataframe.csv`: The visual encounter data used for the n-mixture model analyses.  Three visual encounter surveys were performed for each sampling event over three days.  The columns are
 		- `site_id`: The site number.  For reference to the main text: {2: 'Woodlot', 7: 'Lotus', 10: 'Complex', 15: "Hastie"}
@@ -53,9 +55,9 @@ The repository contains both R and Python code.  To run the Python code, build t
 		- 'species': The four letter code for host species. The first two letters are genus name and second two letters are species name.
 		- 'doy': The day of the year corresponding to the abundance estimate.
 - `code/`: The code folder contains the scripts necessary to reproduce all of the results in the main text.  The scripts are described below
-	- `model_derivation_and_examples.ipynb`: Jupyter notebook shows the derivation of the model and provides some toy examples to show test that the model works as expected.
-	- `seasonal_R0_analysis_by_site.py`: This script computes the seasonal R0 and R_{0, T} for all species and sites for different levels of omega.  Internal functions contained in this script translate the model into code.
+	- `model_derivation_and_examples.ipynb`: Jupyter notebook shows the derivation of the model and provides some toy examples to test that the model works as expected.
+	- `seasonal_R0_analysis_by_site.py`: This script computes the seasonal R_0 and R_{0, T} for all species and sites for different levels of omega.  Internal functions contained in this script translate the model into code.
 	- `nmixture_model_analysis.R`: This script contains code to run the Bayesian N-mixture models used to estimated host abundance.
 	- `manuscript_plots.ipynb`: This Jupyter notebook makes all of the plots for the study and performs the control analyses for Q2.
-	- `calculate_empirical_omega.ipynb`: This Jupyter notebook provides coarse calculations for the possible empirical range of omega values (i.e., spatial overlap values) of the six species use in the paper.
+	- `calculate_empirical_omega.ipynb`: This Jupyter notebook provides coarse calculations for the possible empirical range of omega values (i.e., spatial overlap values) of the six species used in the paper.
 - `results/`: Output from scripts are stored in this folder
