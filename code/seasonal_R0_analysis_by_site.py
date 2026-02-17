@@ -887,10 +887,10 @@ if __name__ == '__main__':
                    (True, True, True, True, True, True)]
 
     # Just the default
-    tf_combos = [(True, False, False, False, False, True)]
+    # tf_combos = [(True, False, False, False, False, True)]
 
     # Run the model for different spatial overlap coefficients, omega
-    overlap_weights = [1.0]#, 0.9, 0.75, 0.5, 0.25, 0.1, 0.05]
+    overlap_weights = [1.0, 0.9, 0.75, 0.5, 0.25, 0.1, 0.05]
 
     # Loop through overlap weights
     for overlap_weight in overlap_weights:
